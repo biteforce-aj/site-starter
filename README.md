@@ -4,7 +4,7 @@ A clean, accessible Next.js starter that every site template in this family is c
 
 ![Screenshot of the demo home page](docs/screenshot.png)
 
-**Live demo:** https://site-starter.vercel.app <!-- TODO: replace with your deployment URL -->
+**Live demo:** https://site-starter-eta.vercel.app
 
 ## Features
 - **Config-driven content**: every name, line of copy, image, link and contact detail lives in `src/config/site.config.ts`

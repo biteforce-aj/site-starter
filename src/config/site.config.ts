@@ -215,7 +215,7 @@ export const siteConfig: SiteConfig = {
     description:
       "Fieldnote Studio designs and builds fast, accessible websites for small businesses.",
     ogImage: "/images/og.jpg",
-    siteUrl: "https://example.com",
+    siteUrl: "https://site-starter-eta.vercel.app",
     locale: "en_US",
   },
 };
