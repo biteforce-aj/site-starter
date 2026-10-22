@@ -3,7 +3,7 @@ export { Button, buttonVariants, type ButtonProps, type ButtonSize, type ButtonV
 export { Card } from "./Card";
 export { Container, type ContainerSize } from "./Container";
 export { Heading } from "./Heading";
-export { Icon, type IconName } from "./Icon";
+export { Icon, iconNames, type IconName } from "./Icon";
 export { Input } from "./Input";
 export { Reveal } from "./Reveal";
 export { Section } from "./Section";

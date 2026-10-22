@@ -1,5 +1,10 @@
 import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { extendTailwindMerge } from "tailwind-merge";
+
+// Teach tailwind-merge the custom tokens from tokens.css so e.g. `py-6` overrides `py-section`.
+const twMerge = extendTailwindMerge({
+  extend: { theme: { spacing: ["gutter", "section"], container: ["content", "prose"] } },
+});
 
 /** Merge class names, letting later Tailwind classes win. */
 export function cn(...inputs: ClassValue[]) {

@@ -73,6 +73,8 @@ const registry = {
 
 export type IconName = keyof typeof registry;
 
+export const iconNames = Object.keys(registry) as IconName[];
+
 type IconProps = LucideProps & {
   name: IconName | (string & {});
   /** Accessible name; omit for decorative icons. */
