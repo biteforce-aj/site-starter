@@ -35,9 +35,9 @@ Open http://localhost:3000. Other scripts: `npm run lint`, `npm run build`, `npm
 To deliver contact form messages, fill in the `TODO` in `src/components/sections/contact.action.ts`.
 
 ## Deploy
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USER/site-starter)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/biteforce-aj/site-starter)
 
 Or import the repo at [vercel.com/new](https://vercel.com/new). No environment variables are needed until you connect an email service.
 
 ## License
-MIT <!-- TODO: add a LICENSE file before publishing -->
+MIT. See [LICENSE](LICENSE).
