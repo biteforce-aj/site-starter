@@ -2,8 +2,7 @@
 Project: site-starter · Prompt file: kit/prompts/00-starter.md · Approved plan: kit/PLAN.md
 
 ## Done
-- Phase 1 Plan · Phase 2 Scaffold · Phase 3 UI components (src/components/ui, barrel index.ts)
-- Extra: /styleguide (every ui component, light + dark panels; page pinned light; noindex, keep out of sitemap)
+- Phase 1 Plan · Phase 2 Scaffold · Phase 3 UI components (src/components/ui, barrel index.ts) · /styleguide (all ui components in light + dark panels; page pinned light; noindex, keep out of sitemap)
 
 ## Next
 - Phase 4 — Section components (part 1): Navbar (mobile menu + theme toggle), Footer, Hero, FeatureGrid, CTABand
