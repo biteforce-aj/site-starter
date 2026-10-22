@@ -1,16 +1,14 @@
 # Progress
-
-Project: site-starter
-Prompt file: kit/prompts/00-starter.md
-Approved plan: kit/PLAN.md
+Project: site-starter · Prompt file: kit/prompts/00-starter.md · Approved plan: kit/PLAN.md
 
 ## Done
-- Phase 1 — Plan (approved, saved to kit/PLAN.md)
-- Phase 2 — Scaffold (tokens, globals, fonts, theme provider, site.config, utils, placeholder images)
+- Phase 1 Plan · Phase 2 Scaffold · Phase 3 UI components (src/components/ui, barrel index.ts)
 
 ## Next
-- Phase 3 — UI components
+- Phase 4 — Section components (part 1): Navbar (mobile menu + theme toggle), Footer, Hero, FeatureGrid, CTABand
 
 ## Known issues / decisions
-- Next 16 + Tailwind v4: tokens in `@theme` (default palette/text/radius/shadow cleared); dark values duplicated in tokens.css (data-theme + media query)
-- Fonts in src/styles/fonts.ts (Inter body, Manrope heading); next.config has cacheComponents on (generator default)
+- Next 16 + Tailwind v4: tokens in `@theme` (defaults cleared); dark values duplicated in tokens.css. Fonts in src/styles/fonts.ts; cacheComponents on
+- `dark:` variant = data-theme with OS fallback (globals.css). Use `max-w-(--container-prose)`: `max-w-prose` is Tailwind's static 65ch
+- Icon uses a named registry in ui/Icon.tsx; add icons there. lucide v1 has no brand icons, so Footer socials need their own SVGs
+- Reveal hides content until hydration: never wrap the Hero/above-the-fold content
