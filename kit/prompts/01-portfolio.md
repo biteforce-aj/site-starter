@@ -1,27 +1,41 @@
-# 01 — Personal portfolio (yours)
+# 01 — Personal portfolio (Joshua Anderson)
 Repo name: `portfolio`
-Design: your own Figma design — this is the one site that must look like you. Figma link: [add link]
+All copy and facts: `kit/prompts/portfolio-content.md` — read it in Phase 1. Never invent facts; leave [bracketed] items as visible TODOs.
+Design: Joshua's Figma file — [add Figma link]. Build to the Figma frames; where a page has no frame, follow the style of the designed pages.
+
+## Audience
+Both freelance clients and employers. The hero splits them: "Need a website?" → Services, "Hiring? See my work" → Work.
 
 ## Pages
-- **Home** — intro with your role (UI/UX designer & web developer), 3–4 featured projects, short about, skills/tools, contact CTA
-- **Work** — all projects as cards, filterable by tag (UI/UX, Web dev, Template, Case study)
-- **Case study `/work/[slug]`** — MDX page: overview, role, problem, research, wireframes, iterations, final UI, results, links (live, GitHub, Figma)
-- **About** — story, process, tools, CV download
-- **Contact** — form, email, socials, availability status
+- **Home** — huge name, role, supporting line, two-path CTAs, featured work (W+Men first), services teaser, short about, contact band
+- **Work** — all projects as cards; filter by Web, UI/UX, Graphic design, System
+- **Case study `/work/[slug]`** — MDX: overview, role, brief, audience, design direction, key decisions, results, next steps, links (live, Figma, GitHub)
+- **Graphic design** — gallery with accessible lightbox
+- **Services** — four services, process steps, "Get a quote" CTA (WhatsApp + form)
+- **About** — story, experience timeline, education, skills grouped, photo, CV download
+- **Contact** — form, email, WhatsApp, LinkedIn, GitHub, availability badge
 
 ## Config fields to add
-`projects: [{ slug, title, summary, role, tags[], cover, liveUrl, repoUrl, figmaUrl, featured, hasCaseStudy }]`, `about`, `skills`, `availability`, `cvPath`
+- `person: { name, fullName, role, location, availability, cvPath, photo }`
+- `projects: [{ slug, title, summary, role, tags[], cover, status: "live" | "coming-soon" | "concept", liveUrl?, repoUrl?, figmaUrl?, featured, hasCaseStudy }]`
+- `services: [{ title, text, icon }]`, `process: [{ step, text }]`
+- `experience: [{ role, org, location, period, points[] }]`, `education: [{ degree, school, year, detail }]`
+- `skills: [{ group, items[] }]`, `graphics: ImageRef[]`
 
-## Signature touch
-A case study layout that reads like a story (big imagery, process steps, before/after slider). This is where your UX thinking shows.
+## Rules
+- Projects with `status: "coming-soon"` show NO client name, screenshot or link — only the generic title and an abstract cover. These are real clients who haven't approved publication.
+- W+Men case study must credit the logo/brand marks to the client.
+
+## Signature touches
+- Figma ↔ live comparison slider on case studies (keyboard accessible)
+- Bold motion: scroll-revealed oversized type, hover-scaling project images, custom cursor on links — all disabled with `prefers-reduced-motion`
 
 ## Phases
-1. **Plan** — routes, components, MDX setup, config shape. Stop for approval.
-2. **Home** — built to the Figma design.
-3. **Work + project cards + filters**
-4. **Case study template** — MDX setup, layout components (ProcessStep, ImageFigure, BeforeAfter), one sample case study.
-5. **About + Contact**
-6. **Polish** — page transitions (reduced-motion safe), responsive, a11y, Lighthouse, README, deploy.
-
-## Later
-Each time you finish a template, add it to `projects` in config. Write 2–3 full case studies over time.
+1. **Plan** — read portfolio-content.md and the Figma link; propose routes, components, config shape, MDX setup. Stop for approval.
+2. **Tokens + config** — brand tokens from Figma (fonts, colours), all content into `site.config.ts`.
+3. **Home** — built to the Figma design.
+4. **Work + project cards + coming-soon cards + filters**
+5. **Case study template + W+Men case study** — MDX, ProcessStep, ImageFigure, FigmaLiveSlider.
+6. **Graphic design gallery + Services**
+7. **About + Contact + CV download**
+8. **Polish** — motion tuning, responsive, a11y, Lighthouse, README, deploy.

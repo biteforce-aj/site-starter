@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Private portfolio content (personal details, unapproved client names)
+kit/prompts/portfolio-content.md
