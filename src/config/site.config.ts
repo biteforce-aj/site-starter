@@ -31,6 +31,8 @@ export interface SiteConfig {
   gallery: { title: string; items: ImageRef[] };
   cta: { title: string; text: string; button: Link };
   contact: {
+    title: string;
+    intro?: string;
     email: string;
     phone?: string;
     /** International format, e.g. "+15550142233". Leave empty to hide the WhatsApp button. */
@@ -182,6 +184,8 @@ export const siteConfig: SiteConfig = {
   },
 
   contact: {
+    title: "Let's talk",
+    intro: "Send a message and we'll reply within one working day.",
     email: "hello@example.com",
     phone: "+1 (555) 014-2233",
     whatsapp: "+15550142233",
