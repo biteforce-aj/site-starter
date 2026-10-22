@@ -8,5 +8,6 @@ export { Input } from "./Input";
 export { Reveal } from "./Reveal";
 export { Section } from "./Section";
 export { Select } from "./Select";
+export { SocialIcon, socialLabels } from "./SocialIcon";
 export { Textarea } from "./Textarea";
 export { ThemeToggle } from "./ThemeToggle";

@@ -6,6 +6,9 @@ const variants = {
   secondary: "bg-accent text-accent-foreground hover:bg-accent/70",
   outline: "border border-border bg-background text-foreground hover:border-input hover:bg-surface",
   ghost: "text-foreground hover:bg-surface",
+  /** For use on `bg-primary` surfaces, e.g. CTABand. */
+  inverse:
+    "bg-primary-foreground text-primary hover:bg-primary-foreground/90 focus-visible:outline-primary-foreground",
 };
 
 const sizes = {
