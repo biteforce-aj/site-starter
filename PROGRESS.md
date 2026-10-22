@@ -10,7 +10,6 @@ Project: site-starter · Prompt file: kit/prompts/00-starter.md · Approved plan
 
 ## Known issues / decisions
 - Next 16 + Tailwind v4: tokens in `@theme`, dark values duplicated in tokens.css, fonts in src/styles/fonts.ts. cacheComponents on, so `new Date()` needs `"use cache"`. New spacing/container tokens go in cn()'s tailwind-merge config
-- Navbar/Footer/WhatsAppButton stay per-page (styleguide has its own chrome); not-found rewrites `#id` nav links to `/#id`
+- Navbar/Footer/WhatsAppButton stay per-page (styleguide has its own chrome); not-found rewrites `#id` nav links to `/#id`. Home has adjacent same-bg sections (Stats/Gallery/Testimonials): consider a `tone` prop in Phase 7
 - OG image is static `seo.ogImage` (1200×630), not opengraph-image.tsx (would need raw hex). Favicon in public/, driven by `brand.favicon`. Added `notFound` slice to SiteConfig
 - Reveal hides content until hydration: never wrap above-the-fold content. contact.action.ts is a stub (no delivery yet)
-- Phase 7: adjacent same-tone sections on home (StatsRow/Gallery/Testimonials all default bg); consider a `tone` prop
