@@ -5,17 +5,18 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Heading } from "@/components/ui/Heading";
 import { Icon } from "@/components/ui/Icon";
-import { Section } from "@/components/ui/Section";
+import { Section, type SectionTone } from "@/components/ui/Section";
 import { siteConfig, type SiteConfig } from "@/config/site.config";
 
 type GalleryProps = {
   content?: SiteConfig["gallery"];
   /** Anchor for nav links. */
   id?: string;
+  tone?: SectionTone;
 };
 
 /** Image grid; each image opens a lightbox built on native <dialog> (Esc closes, arrow keys step). */
-export function Gallery({ content = siteConfig.gallery, id = "work" }: GalleryProps) {
+export function Gallery({ content = siteConfig.gallery, id = "work", tone }: GalleryProps) {
   const { title, items } = content;
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [current, setCurrent] = useState(0);
@@ -28,7 +29,7 @@ export function Gallery({ content = siteConfig.gallery, id = "work" }: GalleryPr
   const step = (by: number) => setCurrent((index) => (index + by + items.length) % items.length);
 
   return (
-    <Section id={id} aria-labelledby={`${id}-title`}>
+    <Section id={id} tone={tone} aria-labelledby={`${id}-title`}>
       <Heading id={`${id}-title`} title={title} align="center" />
       <ul className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
         {items.map((item, index) => (

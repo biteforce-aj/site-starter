@@ -1,12 +1,13 @@
 import { Reveal, Section } from "@/components/ui";
+import type { SectionTone } from "@/components/ui/Section";
 import { siteConfig, type SiteConfig } from "@/config/site.config";
 
-type StatsRowProps = { content?: SiteConfig["stats"] };
+type StatsRowProps = { content?: SiteConfig["stats"]; tone?: SectionTone };
 
 /** Row of headline numbers. */
-export function StatsRow({ content = siteConfig.stats }: StatsRowProps) {
+export function StatsRow({ content = siteConfig.stats, tone }: StatsRowProps) {
   return (
-    <Section aria-label="Key figures">
+    <Section tone={tone} aria-label="Key figures">
       <Reveal>
         <dl className="grid grid-cols-2 gap-x-6 gap-y-10 text-center lg:grid-cols-4">
           {content.items.map((item) => (

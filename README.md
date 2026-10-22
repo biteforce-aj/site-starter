@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site Starter
 
-## Getting Started
+A clean, accessible Next.js starter that every site template in this family is cloned from. Rebrand it by editing two files.
 
-First, run the development server:
+![Screenshot of the demo home page](docs/screenshot.png)
 
+**Live demo:** https://site-starter.vercel.app <!-- TODO: replace with your deployment URL -->
+
+## Features
+- **Config-driven content**: every name, line of copy, image, link and contact detail lives in `src/config/site.config.ts`
+- **Design tokens**: colors, fonts, radius and spacing come only from `src/styles/tokens.css`, with light and dark themes
+- **Sections ready to compose**: Navbar (sticky, mobile menu with focus trap), Hero, LogoStrip, FeatureGrid, StatsRow, Gallery (lightbox), Testimonials, FAQ, CTABand, ContactForm, Footer, WhatsApp button
+- **UI kit**: Button, Card, Badge, Heading, Field, Input, Select, Textarea, Icon and more, previewed at `/styleguide`
+- **Theme toggle** that remembers each visitor's choice and defaults to the system setting
+- **Contact form** with client validation and a server action stub, ready for Resend or Formspree
+- **SEO**: metadata and Open Graph from config, `sitemap.xml`, `robots.txt`, custom 404
+- **Accessible**: semantic landmarks, skip link, visible focus, AA contrast in both themes, scroll reveal that turns off with reduced motion
+- **Fast**: Lighthouse 93+ mobile and 100 desktop for performance, 100 for accessibility, best practices and SEO; no layout shift
+
+## Stack
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · next-themes · lucide-react · Vercel
+
+## Getting started
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open http://localhost:3000. Other scripts: `npm run lint`, `npm run build`, `npm run start`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customize in 3 steps
+1. **Tokens**: set your colors (light and dark), radius and spacing in `src/styles/tokens.css`, and swap fonts in `src/styles/fonts.ts`.
+2. **Config**: replace the demo business in `src/config/site.config.ts` (brand, nav, sections, contact, socials, SEO and `siteUrl`).
+3. **Images**: drop your files into `public/images/` (logo, hero, gallery, avatars, `og.jpg` at 1200×630) and point the config at them.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To deliver contact form messages, fill in the `TODO` in `src/components/sections/contact.action.ts`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USER/site-starter)
 
-## Learn More
+Or import the repo at [vercel.com/new](https://vercel.com/new). No environment variables are needed until you connect an email service.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT <!-- TODO: add a LICENSE file before publishing -->

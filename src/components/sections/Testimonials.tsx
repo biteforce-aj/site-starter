@@ -1,18 +1,20 @@
 import Image from "next/image";
 import { Card, Heading, Icon, Reveal, Section } from "@/components/ui";
+import type { SectionTone } from "@/components/ui/Section";
 import { siteConfig, type SiteConfig } from "@/config/site.config";
 
 type TestimonialsProps = {
   content?: SiteConfig["testimonials"];
   /** Anchor for nav links. */
   id?: string;
+  tone?: SectionTone;
 };
 
-export function Testimonials({ content = siteConfig.testimonials, id = "testimonials" }: TestimonialsProps) {
+export function Testimonials({ content = siteConfig.testimonials, id = "testimonials", tone }: TestimonialsProps) {
   const { title, items } = content;
 
   return (
-    <Section id={id} aria-labelledby={`${id}-title`}>
+    <Section id={id} tone={tone} aria-labelledby={`${id}-title`}>
       <Heading id={`${id}-title`} title={title} align="center" />
       <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {items.map((item, index) => (

@@ -56,10 +56,11 @@ export function Footer({
 
         <nav aria-label="Footer" className="flex flex-col gap-4">
           <h2 className={columnTitle}>Explore</h2>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-0.5">
             {nav.links.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className={footerLink}>
+                {/* py-1 lifts the tap target to ~28px without changing the rhythm. */}
+                <Link href={link.href} className={`${footerLink} inline-block py-1`}>
                   {link.label}
                 </Link>
               </li>

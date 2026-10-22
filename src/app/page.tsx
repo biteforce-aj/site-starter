@@ -23,7 +23,7 @@ export default function Home() {
         <LogoStrip />
         <FeatureGrid />
         <StatsRow />
-        <Gallery />
+        <Gallery tone="surface" />
         <Testimonials />
         <FAQ />
         <CTABand />

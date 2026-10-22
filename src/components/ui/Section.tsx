@@ -7,8 +7,10 @@ const tones = {
   primary: "bg-primary text-primary-foreground",
 };
 
+export type SectionTone = keyof typeof tones;
+
 type SectionProps = React.ComponentProps<"section"> & {
-  tone?: keyof typeof tones;
+  tone?: SectionTone;
   /** Wrap children in a Container of this size; `false` to lay out yourself. */
   container?: ContainerSize | false;
 };

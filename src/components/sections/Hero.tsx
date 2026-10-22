@@ -42,6 +42,7 @@ export function Hero({ content = siteConfig.hero }: HeroProps) {
             height={image.height}
             sizes="(min-width: 80rem) 36rem, (min-width: 64rem) 45vw, 100vw"
             preload
+            fetchPriority="high"
             className="h-auto w-full rounded-xl border border-border shadow-lg"
           />
         )}
