@@ -30,6 +30,7 @@ export interface SiteConfig {
   logos: { title?: string; items: ImageRef[] };
   gallery: { title: string; items: ImageRef[] };
   cta: { title: string; text: string; button: Link };
+  notFound: { title: string; text: string; button: Link };
   contact: {
     title: string;
     intro?: string;
@@ -181,6 +182,12 @@ export const siteConfig: SiteConfig = {
     title: "Ready for a better website?",
     text: "Tell us about your business and we'll reply within one working day.",
     button: { label: "Get in touch", href: "#contact" },
+  },
+
+  notFound: {
+    title: "Page not found",
+    text: "The page you're looking for has moved or no longer exists.",
+    button: { label: "Back to home", href: "/" },
   },
 
   contact: {

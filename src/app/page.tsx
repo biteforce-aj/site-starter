@@ -13,7 +13,7 @@ import {
   WhatsAppButton,
 } from "@/components/sections";
 
-// Temporary preview of the sections built so far — replaced by the full section-based home in Phase 6.
+// Home is composed only from sections; each reads its own slice of siteConfig.
 export default function Home() {
   return (
     <>
